@@ -10,4 +10,4 @@
 #### WechatChatRoomHelper开发
 1. [需求分析简介](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/P2_WechatChatRoomHelper开发/L1_需求分析简介.md)
 
-1. [微信入口寻找分析](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/P2_WechatChatRoomHelper开发/L2_微信入口寻找分析.md)
+2. [微信入口寻找分析](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/P2_WechatChatRoomHelper开发/L2_微信入口寻找分析.md)
