@@ -26,7 +26,6 @@ class TextColorDemo {
     }
 
     private fun invoke(){
-        setWarmText(textView1,"警告操作")
         setFailText(textView2,"失败操作")
         setSuccessText(textView3,"成功操作")
     }
