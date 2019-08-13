@@ -2,6 +2,9 @@
 
 本 git 仓库详细说明了 WechatChatRoomHelper 的开发过程。文档还在编写，会逐步更新。
 
+#### 前言
+1. [前言](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/P0_前言/L0_前言.md)
+
 
 #### Xposed基础
 1. [Xposed Api 介绍](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/P1_Xposed%20基础/L1_Xposed_Api%E4%BB%8B%E7%BB%8D.md)
