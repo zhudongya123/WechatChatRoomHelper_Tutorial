@@ -38,7 +38,7 @@
 
 ![](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master//resource/pict_3.png)
 
-然后在里面写上一个类的路径，这个类就是你的 Xposed 插件的入口类了，类似于 Android 里面的 Application 类，你只需要从包名开始，就像 Java 的 import 语句那样。
+然后在里面写上一个类的路径，这个类就是你的 Xposed 插件的入口类了，类似于 Android 里面的 Application 类，你只需要从包名开始，就像 Java 的 import 语句那样（比如这个类的名称是 PluginEntry，所以你只需要在 xposed_init 里面写一句{packageName}.PluginEntry 就可以了，记得替换你的包名路径。
 
 最后一步！你需要将那个类实现 de.robv.android.xposed.IXposedHookLoadPackage 接口，看起来就像这样：
 
@@ -57,6 +57,7 @@ class PluginEntry : IXposedHookLoadPackage {
 }
 
 ```
+
 
 handleLoadPackage 方法会在合适的时候调用，他提供的参数可以让你过滤进程名，就像那个 if 条件那样，这里我写的是当进程名是微信的时候，同时可以获得微信包的 classloader，有了 classloader，我们可以做很多事情了。
 
@@ -133,7 +134,7 @@ class TextColorDemo {
 
 ![](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/resource/pict_2.png)
 
-findAndHookMethod 是 Xposed Api 里面最常用的一个方法，字面的意思是寻找并钩住方法，实际上在这里实际上是拦截修改之意。参数表依次分别是你需要修改的类（Class），方法名（String），参数类型（Class），最后传入一个叫  XC_MethodHook 的匿名内部类的实例，这样正确的输入参数，即可在 Android Application 运行时执行这个方法的时候提供回调，这两个回调方法分别在原函数执行前和执行后调用，同时提供运行时环境来帮助拦截修改逻辑。
+findAndHookMethod 是 Xposed Api 里面最常用的一个方法，字面的意思是寻找并钩住方法，实际上在这里实际上是拦截修改之意。参数表依次分别是你需要修改的类（Class），方法名（String），参数类型（Class），最后传入一个叫  XC_MethodHook 的匿名内部类的实例，这样正确的输入参数，即可在该应用程序运行时执行这个方法的时候提供回调，这两个回调方法分别在原函数执行前和执行后调用，同时提供运行时环境来帮助拦截修改逻辑。
 
 上面这段代码，在 afterHookedMethod 方法中，通过 param.args 参数取到了 setWarmText 每次执行时的参数表，（param 的成员变量 args 通过一个数组保存了运行时的参数表实例）
 
