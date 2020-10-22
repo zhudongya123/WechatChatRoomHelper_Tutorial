@@ -16,3 +16,6 @@
 1. [需求分析简介](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/P3_WechatChatRoomHelper开发/L1_需求分析简介.md)
 
 2. [微信入口寻找分析](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/P3_WechatChatRoomHelper开发/L2_微信入口寻找分析.md)
+
+
+#### [后记](https://github.com/zhudongya123/WechatChatRoomHelper_Tutorial/blob/master/P4_后记.md)
